@@ -1,7 +1,7 @@
 H, M=map(int, input().split(' '))
 time=int(input())
 
-H += time // 60 # //는 정수 나눗셈임
+H += time // 60 # //는 정수 나눗셈
 M += time % 60
 if M >= 60:
     H += 1
