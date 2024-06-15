@@ -1,3 +1,4 @@
+'''
 len=int(input())
 arr=list(map(int,input().split(' ')))
 find_num=int(input())
@@ -7,3 +8,12 @@ for i in range(len):
         count+=1
 
 print(count)
+'''
+
+# 모범 답안
+len=int(input())
+arr=list(map(int,input().split(' ')))
+find_num=int(input())
+
+# 배열.count()로 개수 세기
+print(arr.count(find_num))
