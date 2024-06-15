@@ -1,3 +1,4 @@
+# set으로 배열 고유값 세기
 arr=[0]*10
 for i in range(10):
     arr[i]=int(input())
