@@ -1,3 +1,4 @@
+# sort로 배열 정렬
 arr=list(range(1,31))
 
 for _ in range(28):
