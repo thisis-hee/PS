@@ -7,7 +7,6 @@ while True:
         break
 '''
 # 2번 풀이 sys.stdin.readlines()로 받기
-
 import sys
 
 s = sys.stdin.readlines() # 각 줄이 원소로 된 리스트를 생성함
