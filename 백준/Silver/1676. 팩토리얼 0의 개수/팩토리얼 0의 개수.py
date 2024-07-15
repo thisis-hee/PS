@@ -10,6 +10,7 @@ zero_list=list(str(factorial))
 
 # 0 개수 세기
 count=0
+# for문 거꾸로 하려먼 -1 해주면 됨
 for j in range(len(zero_list)-1,-1,-1):
     if(zero_list[j]=='0'):
         count+=1
