@@ -1,3 +1,5 @@
+# ord -> 아스키로 바꿔주는 함수
+# try - except 문
 while(True):
     try:
         String=input()
