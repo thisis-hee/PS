@@ -1,3 +1,5 @@
+# 풀이 참고해서 함. 코드 꽤나 어려움..
+
 n = int(input())
 stack = []
 answer = []
