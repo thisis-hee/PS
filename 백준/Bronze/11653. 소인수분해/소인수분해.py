@@ -17,3 +17,14 @@ else:
 
 for i in range(len(A)):
     print(A[i])    
+
+
+# 더 간단한 풀이
+n = int(input())
+i = 2
+while n!=1:
+    if n%i == 0:
+        print(i)
+        n = n/i
+    else:
+        i+=1
