@@ -1,3 +1,4 @@
+# 백트래킹
 N,M=map(int,input().split())
 s=[]
 
