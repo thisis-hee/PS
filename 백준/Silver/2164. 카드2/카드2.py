@@ -1,3 +1,4 @@
+# 큐 사용
 from collections import deque
 
 N=int(input())
