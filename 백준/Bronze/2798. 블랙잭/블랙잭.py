@@ -1,3 +1,4 @@
+# 3중첩 for문
 N,M=map(int,input().split())
 A=list(map(int,input().split()))
 
@@ -15,6 +16,7 @@ print(result)
 
 
 '''
+# itertools 활용
 from itertools import combinations
 
 N,M=map(int,input().split())
