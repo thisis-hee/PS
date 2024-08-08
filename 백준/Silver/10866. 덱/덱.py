@@ -1,3 +1,4 @@
+# input().split()으로 입력받으면 시간초과 뜸
 from collections import deque
 import sys
 
