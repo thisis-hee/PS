@@ -1,3 +1,4 @@
+# heapq는 최소힙 기준으로 되어 있으므로 -1을 곱해준 이후 해주면 쉽게 해결 가능
 import sys
 import heapq
 
