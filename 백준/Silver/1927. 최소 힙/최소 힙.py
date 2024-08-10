@@ -1,3 +1,4 @@
+# heapq 알면 쉬움
 import sys
 import heapq
 
