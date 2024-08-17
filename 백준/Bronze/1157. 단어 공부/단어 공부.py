@@ -1,3 +1,4 @@
+# set, count 활용
 word = input().upper()
 word_list = list(set(word))
 word_cnt=[]
