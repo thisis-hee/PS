@@ -1,3 +1,4 @@
+# 출력 형식 포맷
 C=int(input())
 
 for i in range(C):
