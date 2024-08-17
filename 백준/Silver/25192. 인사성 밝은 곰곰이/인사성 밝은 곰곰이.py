@@ -1,3 +1,4 @@
+# set 자료형 이용해서 풀기
 N=int(input())
 cnt=0
 name_list=set()
