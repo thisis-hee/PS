@@ -1,3 +1,4 @@
+# 딕셔너리 + lambda를 활용한 조건 정렬
 import sys
 
 N,M=map(int,input().split())
