@@ -1,3 +1,4 @@
+# N과 M (6)과 동일 문제. 바로 못풀음
 def func(start):
     if(len(num)==6):
         print(' '.join(map(str,num)))
