@@ -1,3 +1,5 @@
+# join 맨날 까먹음 ㅠ
+
 N=int(input())
 F=int(input())
 
