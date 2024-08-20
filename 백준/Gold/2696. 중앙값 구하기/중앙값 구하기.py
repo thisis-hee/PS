@@ -1,3 +1,4 @@
+# 우선순위 큐 활용해야 함
 from heapq import heappush, heappop
 import sys
 input = sys.stdin.readline
