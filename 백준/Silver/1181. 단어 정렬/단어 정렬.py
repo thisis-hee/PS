@@ -1,3 +1,4 @@
+# list + set 동시 활용 / sort 함수의 key를 활용해 길이로 정렬하기
 N=int(input())
 
 word_list=[]
