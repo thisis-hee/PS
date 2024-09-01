@@ -1,3 +1,4 @@
+# 슬라이싱이랑 checker_count를 N에서 줄여가는 방식을 떠올려야 함
 N=int(input())
 
 checker_count=N
