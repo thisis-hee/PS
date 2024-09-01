@@ -1,0 +1,9 @@
+while(True):
+    a=list(str(int(input())))
+    if(a==['0']):
+        break
+    reverse_a=a[::-1]
+    if(a==reverse_a):
+        print("yes")
+    else:
+        print("no")
