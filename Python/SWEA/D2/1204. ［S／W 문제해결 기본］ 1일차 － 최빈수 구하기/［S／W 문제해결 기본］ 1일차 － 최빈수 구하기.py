@@ -10,7 +10,7 @@ for i in range(1,T+1):
             num_dict[num_list[j]]=1
         else:
             num_dict[num_list[j]]+=1
-    
+    # key=num_dict.get 기억
     max_key = max(num_dict, key=num_dict.get)
     
     print(f'#{i} {max_key}')
