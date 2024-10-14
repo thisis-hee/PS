@@ -18,7 +18,7 @@ for i in range(1,T+1):
             col_list.append(sudoku[l][k])
         if(sorted(col_list)!=[1,2,3,4,5,6,7,8,9]):
             wrong_count+=1
-    
+    # 3x3 검증 반복문 복습
     for x in range(0, 9, 3):
         for y in range(0, 9, 3):
             grid_numbers = []
