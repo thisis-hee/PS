@@ -12,4 +12,5 @@ for i in range(1,T+1):
                 line_dict[j]=1
             else:
                 line_dict[j]+=1
+        # 리스트 컴프리헨션
         print(f'#{i}', *[key for key, value in line_dict.items() if value==1])
