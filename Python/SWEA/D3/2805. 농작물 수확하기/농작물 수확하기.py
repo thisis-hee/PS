@@ -8,11 +8,13 @@ for i in range(1,T+1):
     
     total=0
 
+    # 반반 나눠서 계산
     for row in range(N//2+1):
         value=area[row][N//2-row:N//2+row+1]
         for j in range(len(value)):
             total+=int(value[j])
-            
+    
+    # 반반 나눠서 계산        
     for row in range(N//2+1,N):
         value=area[row][row-N//2:N-(row-N//2)]
         for j in range(len(value)):
