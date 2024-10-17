@@ -9,8 +9,10 @@ for i in range(1,11):
                 j=0
                 continue
             j+=1
+        # 예외처리로 while문 탈출
         except:
             break
+    # 앞자리가 0인경우 제거
     if(num[0]=='0'):
         num=num[1:len(num)]
     print(f'#{i}', ''.join(num))
