@@ -1,3 +1,4 @@
+# min, max로 풀면 시간초과. 평균으로 풀어야 함
 T=int(input())
 
 for i in range(1,T+1):
