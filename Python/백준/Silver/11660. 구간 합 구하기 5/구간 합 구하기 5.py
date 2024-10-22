@@ -1,3 +1,5 @@
+# 누적합으로 풀어야 시간초과 피할 수 있음
+
 import sys
 input=sys.stdin.readline
 N,M=map(int,input().split())
