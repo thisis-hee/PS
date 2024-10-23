@@ -29,10 +29,15 @@ for i in range(1,T+1):
     for k in range(8):
         real_code.append(''.join(password[7*k:7*k+7]))
 
-    even=3*(pw_dict[real_code[0]]+pw_dict[real_code[2]]+pw_dict[real_code[4]]+pw_dict[real_code[6]])
-    odd=pw_dict[real_code[1]]+pw_dict[real_code[3]]+pw_dict[real_code[5]]+pw_dict[real_code[7]]
+    even=0
+    for l in range(0,8,2):
+        even+=3*(pw_dict[real_code[l]])
+    odd=0
+    for m in range(1,9,2):
+        odd+=pw_dict[real_code[m]]
     
     if((even+odd)%10==0):
         print(f'#{i} {pw_dict[real_code[0]]+pw_dict[real_code[1]]+pw_dict[real_code[2]]+pw_dict[real_code[3]]+pw_dict[real_code[4]]+pw_dict[real_code[5]]+pw_dict[real_code[6]]+pw_dict[real_code[7]]}')
     else:
         print(f'#{i} 0')
+
