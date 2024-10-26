@@ -1,3 +1,5 @@
+# 누적합 구하기
+
 N,M=map(int,input().split())
 matrix=[]
 for _ in range(N):
