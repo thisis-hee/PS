@@ -2,6 +2,8 @@ import sys
 from collections import deque
 input = sys.stdin.readline
 
+# deque의 rotate 활용해야 시간초과 안남
+
 n, k, m = map(int, input().split())
 q = deque(range(1, n+1))
 pop_list = []
