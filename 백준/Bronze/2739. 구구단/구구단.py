@@ -1,3 +1,6 @@
+import sys
+input=sys.stdin.readline
+
 dan=int(input())
 for i in range(1,10):
-    print(str(dan)+' * '+str(i)+' = '+str(i*dan))
+    print(f'{dan} * {i} = {dan*i}')
