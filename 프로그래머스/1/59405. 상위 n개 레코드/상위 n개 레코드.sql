@@ -1,3 +1,3 @@
 select name from animal_ins
-order by datetime asc
+order by datetime
 limit 1
