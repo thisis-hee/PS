@@ -1,4 +1,4 @@
-select ins.animal_id, ins.name from animal_ins as ins
-join animal_outs as outs on ins.animal_id=outs.animal_id
-where ins.datetime>outs.datetime
-order by ins.datetime
+select I.animal_id, I.name from animal_ins as I
+join animal_outs as O on I.animal_id=O.animal_id
+where I.datetime>O.datetime
+order by I.datetime
