@@ -1,7 +1,12 @@
 with cte1 as (
-    select I.animal_id, I.animal_type, I.name, I.sex_upon_intake as ins, O.sex_upon_outcome as outs from animal_ins as I
-    join animal_outs as O on I.animal_id=O.animal_id
+    select animal_id from animal_ins
+    where sex_upon_intake like '%Intact%'
+),
+cte2 as (
+    select animal_id from animal_outs
+    where (sex_upon_outcome like '%Spayed%' or sex_upon_outcome like '%Neutered%')
 )
 
-select animal_id, animal_type, name from cte1
-where ins != outs
+select A.animal_id, A.animal_type, A.name from animal_ins as A
+join cte1 on A.animal_id=cte1.animal_id
+join cte2 on cte1.animal_id=cte2.animal_id
