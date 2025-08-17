@@ -1,36 +1,42 @@
 import sys
-sys.setrecursionlimit(1000000)
-input=sys.stdin.readline
+from collections import deque
+from copy import deepcopy
 
-N=int(input())
+input = sys.stdin.readline
 
-arr=[list(map(int,input().split())) for _ in range(N)]
-ans=[]
+N = int(input())
+arr = [list(map(int, input().split())) for _ in range(N)]
+max_num=0
 
-def dfs(i,j):
-    v[i][j]=1
+for i in arr:
+    for j in i:
+        if j > max_num :
+            max_num = j
 
-    for di,dj in ((-1,0),(1,0),(0,-1),(0,1)):
-        ni,nj=di+i,dj+j
-        if(0<=ni<N and 0<=nj<N and new_arr[ni][nj]>0 and v[ni][nj]==0):
-            dfs(ni,nj)
+def bfs(si,sj,rain_height):
+    q=deque()
+    q.append((si,sj))
+    v[si][sj]=1
 
-for i in range(0,max(map(max,arr))):
+    while q:
+        ci,cj=q.popleft()
+        for di, dj in ((-1,0),(1,0),(0,-1),(0,1)):
+            ni,nj=ci+di,cj+dj
+            if(0<=ni<N and 0<=nj<N and arr[ni][nj]>rain_height and v[ni][nj]==0):
+                q.append((ni,nj))
+                v[ni][nj]=1
+
+answer=[]
+
+for i in range(max_num):
     cnt=0
-    new_arr=[[0]*N for _ in range(N)]
-
-    for x in range(N):
-        for y in range(N):
-            new_arr[x][y]=arr[x][y]-i
-
     v=[[0]*N for _ in range(N)]
 
-    for m in range(N):
-        for n in range(N):
-            if(v[m][n]==0 and new_arr[m][n]>0):
-                dfs(m,n)
+    for j in range(N):
+        for k in range(N):
+            if(arr[j][k]>i and v[j][k]==0):
+                bfs(j,k,i)
                 cnt+=1
+    answer.append(cnt)
 
-    ans.append(cnt)
-
-print(max(ans))
+print(max(answer))
