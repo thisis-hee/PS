@@ -1,11 +1,5 @@
 def solution(nums):
-    
+    real_nums = set(nums)
     cnt=len(nums)//2
-    new_nums=set(nums)
-    print(len(new_nums))
-    print(cnt)
-    if(len(new_nums)<=cnt):
-        answer=len(new_nums)
-    else:
-        answer=cnt
+    answer=min(cnt, len(real_nums))
     return answer
