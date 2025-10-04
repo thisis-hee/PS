@@ -1,23 +1,26 @@
 from itertools import permutations
 
 def solution(numbers):
-    prime=[]
-    num_list=[]
-    for i in range(1,len(numbers)+1):
-        for j in permutations(list(numbers),i):
-            num_list.append(int(''.join(j)))
-    num_list=set(num_list)
-    num_list=sorted(num_list)
+    answer=0
+    all_num=set()
+    numbers=list(numbers)
     
-    num_list=[x for x in num_list if x not in (0,1)]
-    print(num_list)
-    for num in num_list:
-        for i in range(2, int(num ** 0.5) + 1):
-            if (num % i == 0):
+    for i in range(1,len(numbers)+1):
+        for j in permutations(numbers, i):
+            all_num.add(int(''.join(j)))
+    
+    if 0 in all_num:
+        all_num.remove(0)
+    if 1 in all_num:
+        all_num.remove(1)
+        
+    for num in all_num:
+        is_prime=True
+        for i in range(2, int(num**(1/2))+1):
+            if num%i==0:
+                is_prime=False
                 break
-        else:
-            prime.append(i)
-
-
-    answer = len(prime)
+        if is_prime:
+            answer+=1
+    
     return answer
