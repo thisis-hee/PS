@@ -2,16 +2,16 @@ import sys
 
 input = sys.stdin.readline
 
-N, M = map(int, input().split())
-num_list = list(map(int, input().split()))
-prefix_sum = [0]
-temp=0
+N,M=map(int,input().split())
+num_list=list(map(int,input().split()))
 
-for num in num_list:
-    temp+=num
-    prefix_sum.append(temp)
+sum=[0]
+tmp=0
 
+for i in num_list:
+    tmp=tmp+i
+    sum.append(tmp)
 
 for _ in range(M):
-    i, j = map(int, input().split())
-    print(prefix_sum[j]-prefix_sum[i-1])
+    a,b=map(int,input().split())
+    print(sum[b]-sum[a-1])
